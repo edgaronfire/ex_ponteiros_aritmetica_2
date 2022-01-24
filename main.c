@@ -49,8 +49,7 @@ main(int argc, char *argv[])
 			printf("1 - mostrar pilha\n");
 			printf("2 - inserir um dado\n");
 			printf("3 - remover dado atual\n");
-			printf("4 - exibir enderecos (DEBUGGING)\n");
-			printf("5 - sair\n\n");
+			printf("4 - sair\n\n");
 			printf("---> ");
 			scanf("%d", &option);
 			switch(option)
@@ -65,10 +64,8 @@ main(int argc, char *argv[])
 						pop();
 						break;
 					case 4:
-						displayStackAddresses();
-						break;
-					case 5:
 						exit(0);
+
 				}
 			system("CLS");
 		}
@@ -88,7 +85,7 @@ void displayStack()
 			printf("STACK_NULL\n");
 	else										/*se não, irá mostrar os valores*/
 		for(i=0; i<stackTop; i++)
-				printf("Stack level %2d: %d\n", i, stack[i]);
+				printf("Stack level %2d:  %d\n", i, stack[i]);
 	/*printf("ptr1--: %X\n", ptr1);*/				/*DEBUG*/
 	/*printf("stackTop: %d\n", stackTop);*/			/*DEBUG*/
 	system("PAUSE");
@@ -134,7 +131,7 @@ int pop()
 			stackTop--;							/*decrementa o topo*/
 		}
 
-	for(timer = 0; timer < 1E9; timer++);		/*delay*/
+	for(timer = 0; timer < 1E8; timer++);		/*delay*/
 
 	/*printf("ptr1--: %X\n", ptr1);*/				/*DEBUG*/
 	/*printf("stackTop: %d\n", stackTop);*/			/*DEBUG*/
