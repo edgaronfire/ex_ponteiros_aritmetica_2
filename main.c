@@ -55,6 +55,7 @@ main(int argc, char *argv[])
 			switch(option)
 				{
 					case 1:
+						putchar('\n');
 						displayStack();
 						break;
 					case 2:
@@ -88,6 +89,7 @@ void displayStack()
 				printf("Stack level %2d:  %d\n", i, stack[i]);
 	/*printf("ptr1--: %X\n", ptr1);*/				/*DEBUG*/
 	/*printf("stackTop: %d\n", stackTop);*/			/*DEBUG*/
+	putchar('\n');
 	system("PAUSE");
 }
 
